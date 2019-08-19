@@ -1,0 +1,20 @@
+{
+  "name": "wardl-lucid",
+  "version": "1.0.0",
+  "description": "Given a time value in the format of HH:MM, will display the next run of each scheduled task",
+  "main": "index.js",
+  "bin": {
+    "task-run-plan": "bin/task-run-plan"
+  },
+  "scripts": {
+    "test": "mocha",
+    "app": "bin/task-run-plan"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  },
+  "dependencies": {}
+}
