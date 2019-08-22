@@ -2,19 +2,38 @@
   "name": "wardl-lucid",
   "version": "1.0.0",
   "description": "Given a time value in the format of HH:MM, will display the next run of each scheduled task",
-  "main": "index.js",
+  "main": "./dist/cli.js",
   "bin": {
-    "task-run-plan": "bin/task-run-plan"
+    "task-runner": "./dist/cli.js"
   },
   "scripts": {
-    "test": "mocha",
-    "app": "bin/task-run-plan"
+    "build": "rimraf dist && mkdir dist && npm run babel",
+    "babel": "babel ./src --out-dir ./dist --ignore '**/*.spec.js'",
+    "test": "mocha  './src/**/*.spec.js'",
+    "test:watch": "npm run test -- --watch",
+    "watch": "npm run babel -- --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "chai": "^4.2.0",
+    "concat-stream": "^2.0.0",
+    "cross-spawn": "^6.0.5",
+    "mocha": "^6.2.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi-reporters": "^1.1.7",
+    "rimraf": "^3.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "commander": "^3.0.0",
+    "core-js": "^3.2.1",
+    "cron-parser": "^2.13.0",
+    "date-and-time": "^0.9.0"
+  }
 }

@@ -1,0 +1,6 @@
+--require @babel/register
+--reporter mocha-multi-reporters
+--reporter-options configFile=test/reporters-config.json
+--slow 10
+--check-leaks
+--full-trace

@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "spec": true,
+        "debug": false,
+        "useBuiltIns": "entry",
+        "corejs": 3,
+        "targets": {
+          "node": 12
+        }
+      }
+    ]
+  ]
+}

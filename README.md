@@ -30,27 +30,31 @@ You may use any programming language you are comfortable in to solve this proble
 
 ## Setup / Install
 
-Setup is for Mint 18.3 but should work on any Linux OS.
+Setup was done on Mint 18.3 but should work on any Linux OS.
 
 Install NodeJs >8 - https://github.com/nodesource/distributions#debinstall, developed with:
  - `node --version` = v12.8.1
  - `npm --version` = 6.10.2
-
-## Run Tests
-
-`npm test`
-
-## Run Application
-
-To run 
- - `npm link` within this project will allow you to run `task-run-plan` anywhere
- - Use custom npm script `npm run app` locally
- - Install package globally using `npm install -g` then run `task-run-plan` anywhere
-
-##TODO
-
- - `task-run-plan` is a bad name, think of something better
  
+Building with Babel to enable use of ES6 features.
+
+### Changing source code
+1. run `npm install`
+2. run `npm run watch`
+3. you can execute any command using `node dist/cli.js [options]`
+
+### Run Tests
+
+`npm run test`
+
+### Run Application
+
+To run first `npm install` then `npm run build` and either:
+ - `npm link` within this project will allow you to run `task-runner [options]` anywhere
+ - `node dist/cli.js [options]`
+
+If running different version of node (12) update the target node version in the `.babelrc` file.
+
 
 
 
