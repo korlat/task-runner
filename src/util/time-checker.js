@@ -8,6 +8,6 @@ export default function convertTimeToDate(time) {
     }
     let timeArray = time.split(":");
     let plannedDate = new Date(Date.now());
-    plannedDate.setHours(Number(timeArray[0]), Number(timeArray[1]));
+    plannedDate.setHours(Number(timeArray[0]), Number(timeArray[1]), 0);
     return plannedDate;
 }

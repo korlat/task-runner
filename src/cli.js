@@ -20,9 +20,9 @@ let rl = readline.createInterface({
 });
 
 rl.on('line', (input) => {
-    let config = input.split(" ");
+    let config = input.trim().split(new RegExp("\\s"));
     if (config.length !== 3) {
-        console.error("Invalid config input, example format '30 1 /bin/run_me_daily'");
+        console.error(`Invalid config: '${config}', example format '30 1 /bin/run_me_daily'`);
         process.exit(1);
     }
 
